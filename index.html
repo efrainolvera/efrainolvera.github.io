@@ -37,9 +37,106 @@ color:black;
     <title>efrain5936</title>
   </head>
   <body>
-     <hr>
-   <h1><a href="a">a</a></h1>
-   <h1><a href="b">b</a></h1>
-   <hr>
   </body>
+</html>
+<!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <body bgcolor="#eee">
+<meta charset="utf-8">
+<title>b</title>
+ 
+<style>
+* {
+	margin:0;
+	padding:0;
+	font-family:Microsoft YaHei,serif;
+}
+li {
+	list-style:none;
+}
+.ball {
+	position:absolute;
+	top:0;
+	left:0;
+	width:100px;
+	height:100px;
+	background:pink;
+	border-radius:50%;
+}
+</style>
+</head>
+<body>
+<div></div>
+ 
+<script>
+  play(10);
+ 
+  function play(num) {
+             // Generar num div
+      for (var i = 0; i < num; i++) {
+          var Div = document.createElement("div");
+          Div.className = "ball";
+                     Div.leftVal = 3 + i; // Prestore la velocidad inicial de cada bola
+                     Div.topVal = 3 + i; // Prestore la velocidad inicial de cada bola
+          Div.style.backgroundColor = randomC();
+          document.body.appendChild(Div);
+      }
+ 
+      var aBall = document.querySelectorAll(".ball");
+             maxTop = document.documentElement.clientHeight-aBall [0] .clientHeight, // Obtenga el valor máximo de top
+                     maxLeft = document.documentElement.clientWidth-aBall [0] .clientWidth; // Obtener el valor máximo de left
+ 
+      window.onresize = function() {
+                     maxTop = document.documentElement.clientHeight-aBall [0] .clientHeight; // Obtener el valor máximo de top
+          maxLeft = document.documentElement.clientWidth - aBall[0].clientWidth; //
+      };
+ 
+      auto();
+ 
+      function auto() {
+          for (var i = 0; i < num; i++) {
+              var Ball = aBall[i],
+                                     startL = Ball.offsetLeft, // Tome los valores iniciales izquierdo y TOP de cada bola
+                                     startT = Ball.offsetTop, // Toma los valores iniciales izquierdo y TOP de cada bola
+                                     Left = startL + Ball.leftVal, // Change, los valores izquierdo y superior de cada bola
+                                     Top = startT + Ball.topVal; // Cambiar, los valores izquierdo y superior de cada bola
+ 
+ 
+              if (Left >= maxLeft || Left <= 0) {
+                                     Left = Math.min (Left, maxLeft); // Limita el valor máximo de Left
+                                     Left = Math.max (Left, 0); // Limita el mínimo
+ 
+                  Ball.leftVal = -Ball.leftVal;
+                  Ball.style.backgroundColor = randomC();
+ 
+              }
+              if (Top >= maxTop || Top <= 0) {
+                  Ball.topVal = -Ball.topVal;
+ 
+                                     Top = Math.min (Top, maxTop); // Limita el valor máximo de Left
+                                     Top = Math.max (Top, 0); // Limita el mínimo
+                  Ball.style.backgroundColor = randomC();
+              }
+ 
+ 
+              Ball.style.top = Top + "px";
+              Ball.style.left = Left + "px";
+          }
+          requestAnimationFrame(auto)
+ 
+      }
+      // rgb(0-255)
+      function randomC() {
+          var r = Math.floor(Math.random() * 256),
+              g = Math.floor(Math.random() * 256),
+              b = Math.floor(Math.random() * 256);
+          return "rgb(" + r + "," + g + "," + b + ")";
+      }
+ 
+  }
+</script>
+<h1><a href="https://efrainolvera.github.io/">atrás</a></h1>
+</body>
 </html>
