@@ -122,4 +122,3 @@ var Words;
 				document.getElementById('talkwords').className = 'talk_word';	
 			}
         }
-alert("bienvenido")
