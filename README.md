@@ -1,4 +1,4 @@
 <hr>
-<p><li>html</li></p>
-<p><li>javascript</li></p>
+<p><li><i>html</i></li></p>
+<p><li><i>javascript</i></li></p>
 <hr>
