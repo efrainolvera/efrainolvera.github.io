@@ -38,7 +38,7 @@ var Words;
 				"userStatus": userStatus,
 				"username": username 
 			})); 
-			console.log("ok"); 
+			console.log("okey"); 
 		} 
 
 		function toPostProcess() {/ * Establecer el siguiente código para que se ejecute después de que el objeto XHR obtenga la información devuelta * / 
@@ -61,7 +61,8 @@ var Words;
 						return handleError(xhr, e);
 					}  
 				} else {
-					console.log("Puede haber problemas de dominio cruzado, solo corríjalos"); 
+                                        console.log("ERROR");
+					console.error("ERROR"); 
 				}  
 			} 
 		}		
