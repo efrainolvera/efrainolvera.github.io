@@ -1,7 +1,14 @@
-*{margin:0;padding:0;}
+*{
+  margin:0;padding:0;
+}
 header{
   width:100%;
   overflow:hidden;
   background:#171819;
   margin-bottom:20px;
+}
+.titulo{
+align-items: center;
+display: flex;
+justify-content: center;
 }
