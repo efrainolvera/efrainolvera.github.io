@@ -6,6 +6,7 @@ header{
   overflow:hidden;
   background:#171819;
   margin-bottom:20px;
+  color: white ;
 }
 .titulo{
 align-items: center;
@@ -14,4 +15,14 @@ justify-content: center;
 }
 marquee{
   color:lime;
+}
+footer{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background:#171819;
+    height: auto;
+    width: 100vw;
+    padding-top: 40px;
 }
