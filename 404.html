@@ -4,8 +4,8 @@
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>efrain5936</title>
-   <link rel="stylesheet" href="/css/style.css">
-   <script src="js/script.js" async></script>
+   <link rel="stylesheet" href="./css/style.css">
+   <script src="./js/script.js" async></script>
 </head>
 <body>
    <header>
@@ -29,5 +29,11 @@
   <h1>Página no encontrada</h1>
 </center>
    </div>
+   <span id="resultado"></span>
+      <script>
+   var URL = window.location.pathname;
+   result="La URL solicitada "+URL+" no se encontró en este servidor."
+document.getElementById('resultado').innerHTML = result;
+</script>
 </body>
 </html>
