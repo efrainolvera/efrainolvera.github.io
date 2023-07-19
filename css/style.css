@@ -84,3 +84,6 @@ section > *{margin: 0 auto;max-width: 1000px;}
   .hamburger.active .bar:nth-child(3) {
     transform: translateY(-8px) rotate(-45deg);
   }
+ .hamburger{
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+ }
