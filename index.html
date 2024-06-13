@@ -27,7 +27,36 @@
       </nav>
    </header>
    <div class="structure">
-   <h1 style="text-align: center;-webkit-text-stroke: 1px #000;color:#000;">¡HOLA!</h1>
+   <style>
+  .box-inicio {
+    text-align: center;
+    margin-top: 50px;
+    animation: slideIn 1.50s ease-in-out;
+  }
+  @keyframes slideIn {
+    from {
+      opacity: 0;
+      color: #808080;
+      transform: translateY(-50%);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  .box-inicio h1 {
+    font-size: 2em;
+    color: #333;
+  }
+ .box-inicio p {
+    font-size: 1.2em;
+    color: #666;
+  }
+</style>
+<div class="box-inicio">
+  <h1>Bienvenido</h1>
+  <p>Aquí encontrarás información sobre mis proyectos y contribuciones.</p>
+</div>
    <footer>
      <h1 style="text-align:center;">
  	<a href="https://instagram.com/efrain_5936" class="fa fa-instagram"></a>
